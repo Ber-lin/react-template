@@ -1,12 +1,15 @@
-import {useState} from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import React, {useState} from 'react';
 import './App.less';
 
 function App() {
 	const [count, setCount] = useState(0);
 
-	return <> </>;
+	return (
+		<>
+			<div>Hello World！！{count}</div>
+			<button onClick={() => setCount(count + 1)}>add</button>
+		</>
+	);
 }
 
 export default App;

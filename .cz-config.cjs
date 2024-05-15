@@ -1,4 +1,5 @@
 'use strict';
+// https://github.com/leoforfree/cz-customizable#steps
 module.exports = {
 	types: [
 		{value: 'feat', name: '✨新增:    新的内容'},
@@ -11,17 +12,20 @@ module.exports = {
 		},
 		{value: 'perf', name: '️️⚡️性能:    提升性能'},
 		{value: 'test', name: '✅测试:    添加一个测试'},
+		{value: 'config', name: '⚙️添加配置      添加配置'},
 		{value: 'build', name: '🔧工具:    开发工具变动(构建、脚手架工具等)'},
 		{value: 'rollback', name: '⏪回滚:    代码回退'},
 		{value: 'addLog', name: '👨🏻‍💻添加log:    添加log'},
-		{value: 'config', name: '⚙️添加配置      添加配置'},
 	],
+	// 官方给的示例不太符合commit规范，scopes里应该说明本次改动的范围
 	scopes: [
-		{name: 'leetcode'},
-		{name: 'javascript'},
-		{name: 'typescript'},
-		{name: 'Vue'},
-		{name: 'node'},
+		{name: 'pages'},
+		{name: 'routes'},
+		{name: 'components'},
+		{name: 'images'},
+		{name: 'services'},
+		{name: 'utils'},
+		{name: 'configs'},
 	],
 	// it needs to match the value for field type. Eg.: 'fix'
 	/*  scopeOverrides: {
@@ -46,6 +50,7 @@ module.exports = {
 	},
 	allowCustomScopes: true,
 	allowBreakingChanges: ['特性', '修复'],
+
 	// limit subject length
 	subjectLimit: 100,
 };
